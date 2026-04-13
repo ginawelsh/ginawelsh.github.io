@@ -122,14 +122,51 @@
 
     h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem; }
 
-    .entry { margin-bottom: 2rem; }
+    .cv-section {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin: 2rem 0 1rem;
+    }
+
+        .inline-link {
+      color: var(--accent-2);
+      font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .inline-link:hover { color: var(--accent); }
+
+
+    .entry { margin-bottom: 1.5rem; }
     .entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
     .entry-title { font-size: 1rem; font-weight: 700; }
     .entry-org { color: var(--text-muted); font-size: 0.9rem; }
-    .entry-date { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; }
+    .entry-date { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; }
     .entry-desc { margin-top: 0.375rem; font-size: 0.95rem; }
 
-    hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    .entry-bullets {
+      margin-top: 0.375rem;
+      padding-left: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.925rem;
+      color: var(--text);
+    }
+
+    .skills-table { display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.925rem; }
+    .skills-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .skills-label { font-weight: 700; min-width: 7rem; flex-shrink: 0; color: var(--text-muted); }
+    .skills-value { flex: 1; }
+
+    .info-table { display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.925rem; }
+    .info-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .info-label { font-weight: 700; min-width: 7rem; flex-shrink: 0; color: var(--text-muted); }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 1.75rem 0; }
 
     .site-footer {
       margin-top: 4rem;
@@ -183,34 +220,191 @@
     </div>
     <nav class="nav-menu" aria-label="Main menu">
       <a href="/" class="nav-link">Home</a>
-      <a href="/experience/" class="nav-link">CV</a>
-      <a href="/posts/" class="nav-link" aria-current="page">Projects</a>
-      <a href="/projects/" class="nav-link">Writing</a>
+      <a href="/experience/" class="nav-link" aria-current="page">CV</a>
+      <a href="/projects/" class="nav-link">Projects</a>
+      <a href="/posts/" class="nav-link">Writing</a>
     </nav>
   </header>
 
   <main id="main">
-    <h1>Experience</h1>
+    <h1>CV</h1>
+
+    <!-- Education -->
+    <h2 class="cv-section">Education</h2>
 
     <div class="entry">
       <div class="entry-header">
         <div>
-          <div class="entry-title">MSc Natural Language Processing</div>
+          <div class="entry-title">Master's Programme in Language Technology</div>
           <div class="entry-org">Uppsala University, Sweden</div>
         </div>
         <div class="entry-date">2024 – present</div>
+      </div>
+      <ul class="entry-bullets">
+        <li>Expected completion June 2026</li>
+        <li>Coursework includes Python programming, speech processing, natural language processing, information retrieval, and machine translation</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Bachelor's (Honours) in Linguistics — First Class Honours</div>
+          <div class="entry-org">The Australian National University, Australia</div>
+        </div>
+        <div class="entry-date">2015 – 2020</div>
+      </div>
+      <ul class="entry-bullets">
+        <li>Thesis: <em>Automatic morphosyntactic analysis of Light Warlpiri corpus data</em></li>
+        <li>Achieved highest grade in Honours cohort</li>
+        <li>Coursework included formal linguistics (incl. phonetics and phonology), quantitative research methods, programming, data analysis, and philosophy</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <!-- Teaching Experience -->
+    <h2 class="cv-section">Teaching Experience</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Teaching Assistant</div>
+          <div class="entry-org">Uppsala University, Sweden</div>
+        </div>
+        <div class="entry-date">Nov 2025 – present</div>
+      </div>
+      <ul class="entry-bullets">
+        <li><strong>Natural Language Processing (5LN710)</strong>: statistical language models, morphological analysis, basic neural networks.</li>
+        <li><strong>Information Retrieval (5LN712)</strong>: information extraction, question-answering, lexical semantics, text categorisation, and topic detection.</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <!-- Research Projects -->
+    <h2 class="cv-section">Research Projects</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Mitigating Gender Bias in English-Ukrainian Machine Translation Models</div>
+          <div class="entry-org">Uppsala University — Group Project</div>
+        </div>
+        <div class="entry-date">Oct 2025 – Mar 2026</div>
+      </div>
+      <ul class="entry-bullets">
+        <li>Implemented gender bias mitigation methods for English-Ukrainian neural machine translation systems, using a novel framework for evaluating gender bias.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Northern Sámi ASR Dialectal Adaptation</div>
+          <div class="entry-org">Uppsala University — R&amp;D Project</div>
+        </div>
+        <div class="entry-date">Oct 2025 – Jan 2026</div>
+      </div>
+      <ul class="entry-bullets">
+        <li>Created a training dataset of gender-balanced TTS-generated data for Northern Sámi.</li>
+        <li>Fine-tuned an automatic speech recognition model (Whisper) using TTS-generated and dialectal speech data to improve performance across Northern Sámi language varieties.</li>
+        <li>Experimented with different proportions of dialect and TTS data to find the best fine-tuned ASR performance.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Morphosyntactic Analyser for Light Warlpiri</div>
+          <div class="entry-org">Australian National University — Honours Project</div>
+        </div>
+        <div class="entry-date">Dec 2019 – Dec 2020</div>
+      </div>
+      <ul class="entry-bullets">
+        <li>Built computational tools for automatic morphosyntactic analysis of Light Warlpiri corpus data, a mixed language in northern Australia.</li>
+        <li>Developed a rule-based parser for mixed language morphology.</li>
+        <li> Wrote <a href="https://openresearch-repository.anu.edu.au/items/b39c0ef6-a347-4fc9-9674-bbe718929811" class="inline-link">honours thesis</a> documenting the background and methodology of the project.</a>
+        <li>Code accessible <a href="https://github.com/ginawelsh/mor-program-lw" class="inline-link">here</a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- Publications -->
+    <h2 class="cv-section">Publications</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Mitigating Gender Bias in English-Ukrainian Machine Translation Models</div>
+          <div class="entry-org">European Association for Machine Translation</div>
+        </div>
+        <div class="entry-date">Under peer review</div>
+      </div>
+      <p class="entry-desc">Co-authored paper. Submitted to conference  March 2026.</p>
+    </div>
+
+    <hr>
+
+    <!-- Honours & Awards -->
+    <h2 class="cv-section">Honours &amp; Awards</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Reginald De Bray Prize for Linguistics</div>
+          <div class="entry-org">Australian National University</div>
+        </div>
+        <div class="entry-date">Mar 2021</div>
+      </div>
+      <p class="entry-desc">Awarded for achieving the highest academic result in the Linguistics Honours programme.</p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Chancellor's Letter of Commendation</div>
+          <div class="entry-org">Australian National University</div>
+        </div>
+        <div class="entry-date">May 2021</div>
+      </div>
+      <p class="entry-desc">Awarded for achieving a GPA of 7.00/7.00 over the 2020 academic year.</p>
+    </div>
+
+    <hr>
+
+    <!-- Technical Skills -->
+    <h2 class="cv-section">Technical Skills</h2>
+
+    <div class="skills-table">
+      <div class="skills-row">
+        <span class="skills-label">Programming</span>
+        <span class="skills-value">Python, R, Linux, Regular expressions, Jupyter notebooks, Google Colab, Git, Bash, Pandas, CSV, JSON, Excel</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">NLP</span>
+        <span class="skills-value">Hugging Face models, spaCy, NLTK, automatic speech recognition (ASR), text-to-speech (TTS), machine translation</span>
+      </div>
+      <div class="skills-row">
+        <span class="skills-label">Linguistics</span>
+        <span class="skills-value">Phonetics and phonology (incl. IPA and X-SAMPA transcription), low-resource languages, morphosyntax</span>
       </div>
     </div>
 
     <hr>
 
-    <div class="entry">
-      <div class="entry-header">
-        <div>
-          <div class="entry-title">BA Linguistics</div>
-          <div class="entry-org">Australian National University, Australia</div>
-        </div>
-        <div class="entry-date">2016 – 2020</div>
+    <!-- Other Information -->
+    <h2 class="cv-section">Other Information</h2>
+
+    <div class="info-table">
+      <div class="info-row">
+        <span class="info-label">Citizenships</span>
+        <span>Australian, Irish (EU)</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Languages</span>
+        <span>English (native), French (proficient / B2), Swedish (intermediate / B1)</span>
       </div>
     </div>
 
@@ -221,13 +415,13 @@
       <p>Find me on</p>
       <ul class="social-list">
         <li>
-          <a href="mailto:gmwelsh97@gmail.com" class="social-link" aria-label="Email">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 15c.81 0 1.5-.3 2.11-.89c.59-.61.89-1.3.89-2.11s-.3-1.5-.89-2.11C13.5 9.3 12.81 9 12 9s-1.5.3-2.11.89C9.3 10.5 9 11.19 9 12s.3 1.5.89 2.11c.61.59 1.3.89 2.11.89m0-13c2.75 0 5.1 1 7.05 2.95S22 9.25 22 12v1.45c0 1-.35 1.85-1 2.55c-.7.67-1.5 1-2.5 1c-1.2 0-2.19-.5-2.94-1.5c-1 1-2.18 1.5-3.56 1.5c-1.37 0-2.55-.5-3.54-1.46C7.5 14.55 7 13.38 7 12c0-1.37.5-2.55 1.46-3.54C9.45 7.5 10.63 7 12 7c1.38 0 2.55.5 3.54 1.46C16.5 9.45 17 10.63 17 12v1.45c0 .41.16.77.46 1.08s.65.47 1.04.47c.42 0 .77-.16 1.07-.47s.43-.67.43-1.08V12c0-2.19-.77-4.07-2.35-5.65S14.19 4 12 4s-4.07.77-5.65 2.35S4 9.81 4 12s.77 4.07 2.35 5.65S9.81 20 12 20h5v2h-5c-2.75 0-5.1-1-7.05-2.95S2 14.75 2 12s1-5.1 2.95-7.05S9.25 2 12 2"/></svg>
+          <a href="https://github.com/ginawelsh" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
           </a>
         </li>
         <li>
-          <a href="https://github.com/ginawelsh" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+          <a href="https://scholar.google.com/citations?user=UWe_GJEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Google Scholar">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
           </a>
         </li>
       </ul>
