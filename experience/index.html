@@ -241,7 +241,9 @@
       </div>
       <ul class="entry-bullets">
         <li>Coursework: Python programming, speech processing, natural language processing, information retrieval, machine translation, Swedish language.</li>
-        <li>Thesis: <em>Textual Analysis and Detection of LLM-Generated Swedish Text</em> (in progress).</li>
+        <li>Thesis: <em>LLM-generated Swedish: Linguistic Features, Detection, and Human Judgement</em> (in progress). First combined feature analysis and detection evaluation of LLM-generated Swedish, across formal and informal registers, three prompt conditions, and three models.</li>
+        <li>LLM Swedish deviates from human Swedish on almost all features; a feature-informed evasive prompt mitigates some AI signals but over-corrects others, creating a new signal in the opposite direction.</li>
+        <li>Evasion succeeded against LLM judges but failed against an embedding-based classifier. Human readers detected informal LLM text above chance (62.4%) but not formal abstracts (51.8%), the reverse of the judges' pattern.</li>
       </ul>
     </div>
 
@@ -268,46 +270,33 @@
     <div class="entry">
       <div class="entry-header">
         <div>
-          <div class="entry-title">Mitigating Gender Bias in English–Ukrainian Machine Translation.</div>
-          <div class="entry-org">Pavels Ivanovs*, Gina Welsh*, Irini Selenica* — equal contribution</div>
+          <div class="entry-title">Evading One Detector, Alerting Another: Linguistic Features and AI-Text Detection in Swedish.</div>
+          <div class="entry-org">Gina Welsh, Birger Moëll</div>
         </div>
-        <div class="entry-date">Accepted at EAMT 2026 (proceedings forthcoming)</div>
+        <div class="entry-date">2026 (under review)</div>
+      </div>
+      <ul class="entry-bullets">
+        <li>Compared interpretable linguistic features of human-written and LLM-generated Swedish across a formal register (Bachelor's-thesis abstracts) and an informal one (online forum comments), using GPT-5.2 text produced under baseline, human-imitating, and feature-based detector-evasive prompts.</li>
+        <li>Tested detectability across all registers and conditions using an embedding-based classifier and 3 multilingual LLM judges.</li>
+        <li>Created a dataset of human-written Swedish and multiple LLM-generated counterparts; dataset and pipeline to be released publicly.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Mitigating Gender Bias in English–Ukrainian Machine Translation.</div>
+          <div class="entry-org">Pavels Ivanovs*, Gina Welsh*, Irini Selenica* 
+          <p></p>
+            *equal contribution</div>
+        </div>
+        <div class="entry-date">26th Annual Conference of the European
+Association 2026, Tilburg, Netherlands.</div>
       </div>
       <ul class="entry-bullets">
         <li>Evaluated two bias-mitigation methods across two pre-trained MT models (OPUS-MT, mBART) on a curated dataset of occupation-based sentences.</li>
         <li>Findings: LLM-based correction gave the strongest mitigation; gender tagging produced mixed results.</li>
         <li>The framework uses Ukrainian's overt gender morphology as a bias signal and generalises to other grammatically gendered languages.</li>
-      </ul>
-    </div>
-
-    <hr>
-
-    <!-- Industry Experience -->
-    <h2 class="cv-section">Industry Experience</h2>
-
-    <div class="entry">
-      <div class="entry-header">
-        <div>
-          <div class="entry-title">AI Developer / Data Analyst</div>
-          <div class="entry-org">Remote</div>
-        </div>
-        <div class="entry-date">2024 – present</div>
-      </div>
-      <ul class="entry-bullets">
-        <li>Building a retrieval-augmented generation (RAG) system for IT financial data, using SQL database and LLM answer generation grounded in retrieved sources.</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="entry-header">
-        <div>
-          <div class="entry-title">Technology Analyst</div>
-          <div class="entry-org">Accenture, Australia</div>
-        </div>
-        <div class="entry-date">2022 – 2024</div>
-      </div>
-      <ul class="entry-bullets">
-        <li>API tester and designer for enterprise-wide systems in an Australian governmental agency.</li>
       </ul>
     </div>
 
@@ -392,6 +381,37 @@
       </ul>
     </div>
 
+    <hr>
+
+    <!-- Industry Experience -->
+    <h2 class="cv-section">Industry Experience</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">AI Developer / Data Analyst</div>
+          <div class="entry-org">Remote</div>
+        </div>
+        <div class="entry-date">2024 – present</div>
+      </div>
+      <ul class="entry-bullets">
+        <li>Building a retrieval-augmented generation (RAG) system for IT financial data, using SQL database and LLM answer generation grounded in retrieved sources.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Application Development Analyst</div>
+          <div class="entry-org">Accenture, Australia</div>
+        </div>
+        <div class="entry-date">2022 – 2024</div>
+      </div>
+      <ul class="entry-bullets">
+        <li>API tester and designer for enterprise-wide systems in an Australian governmental agency.</li>
+      </ul>
+    </div>
+
     <!-- Honours & Awards -->
     <h2 class="cv-section">Honours &amp; Awards</h2>
 
@@ -434,10 +454,6 @@
       <div class="skills-row">
         <span class="skills-label">Linguistics</span>
         <span class="skills-value">Phonetics &amp; phonology (IPA, X-SAMPA), morphosyntax, low-resource and mixed languages</span>
-      </div>
-      <div class="skills-row">
-        <span class="skills-label">Languages</span>
-        <span class="skills-value">English (native), French (B2), Swedish (B1). Australian &amp; Irish (EU) citizenship.</span>
       </div>
     </div>
 
